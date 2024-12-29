@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.springstudy.transactional.TransactionalControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-12-25T12:13:01" hostname="BOSSMONSTER2016" time="205.63">
+  <properties/>
+  <testcase name="Transactional Debugging Test" classname="org.example.springstudy.transactional.TransactionalControllerTest" time="205.63"/>
+  <system-out><![CDATA[2024-12-25 21:12:52 [Test worker] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - [requestId=,
+                userId=] Could not detect default configuration classes for test class [org.example.springstudy.transactional.TransactionalControllerTest]: TransactionalControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-12-25 21:12:52 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [requestId=,
+                userId=] Found @SpringBootConfiguration org.example.springstudy.SpringStudyApplication for test class org.example.springstudy.transactional.TransactionalControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.1)
+
+2024-12-25 21:12:53 [Test worker] INFO  o.e.s.t.TransactionalControllerTest - [requestId=,
+                userId=] Starting TransactionalControllerTest using Java 21.0.5 with PID 25460 (started by bbubb in G:\0000study\0002personal_project\0002study_project\Spring-study)
+2024-12-25 21:12:53 [Test worker] INFO  o.e.s.t.TransactionalControllerTest - [requestId=,
+                userId=] No active profile set, falling back to 1 default profile: "default"
+2024-12-25 21:12:55 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [requestId=,
+                userId=] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-25 21:12:55 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [requestId=,
+                userId=] Finished Spring Data repository scanning in 126 ms. Found 1 JPA repository interface.
+2024-12-25 21:12:55 [Test worker] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [requestId=,
+                userId=] Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-12-25 21:12:56 [Test worker] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - [requestId=,
+                userId=] Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-12-25 21:12:56 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - [requestId=,
+                userId=] HikariPool-1 - Starting...
+2024-12-25 21:12:57 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - [requestId=,
+                userId=] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4813d0
+2024-12-25 21:12:57 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - [requestId=,
+                userId=] HikariPool-1 - Start completed.
+2024-12-25 21:12:57 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - [requestId=,
+                userId=] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-25 21:12:57 [Test worker] INFO  org.hibernate.Version - [requestId=,
+                userId=] HHH000412: Hibernate ORM core version 6.6.4.Final
+2024-12-25 21:12:57 [Test worker] INFO  o.h.c.i.RegionFactoryInitiator - [requestId=,
+                userId=] HHH000026: Second-level cache disabled
+2024-12-25 21:12:58 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - [requestId=,
+                userId=] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-25 21:12:58 [Test worker] INFO  o.hibernate.orm.connections.pooling - [requestId=,
+                userId=] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.33
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-25 21:13:00 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - [requestId=,
+                userId=] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-25 21:13:00 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - [requestId=,
+                userId=] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-25 21:13:00 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - [requestId=,
+                userId=] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-25 21:13:01 [Test worker] INFO  o.e.s.t.TransactionalControllerTest - [requestId=,
+                userId=] Started TransactionalControllerTest in 8.314 seconds (process running for 12.962)
+Hibernate: insert into tasks (date,owner,priority,progress,title,id) values (?,?,?,?,?,?)
+2024-12-25 21:16:26 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - [requestId=,
+                userId=] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m29s464ms300µs100ns).
+success
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (C:\Users\bbubb\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.15.11\a38b16385e867f59a641330f0362ebe742788ed8\byte-buddy-agent-1.15.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
