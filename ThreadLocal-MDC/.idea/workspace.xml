@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e36a144f-6023-4206-96db-6803565cfc3e" name="Changes" comment="ThreadLocal 사용해보기&#10;&#10;CUstomRequestContext.java =====&#10;Context의 값을 저장할 객체 생성&#10;&#10;CustomRequestContextFilter.java====&#10;요청이 들어왔을 때 필터  requestID, userId를 지정&#10;&#10;ThreadLocalController.java=====&#10;ThreadLocal을 테스트 할 Controller지정 &#10;&#10;RequestContextFilterTest.java=====&#10;테스트에 Filter지정 &#10;MockMvc를 이용해서 Controller테스트 수행(MockMvc는 Controller 컴포넌트만 읽어와서 수행한다. 그 외의 다른 빈은 Import를통해서 Import해줘야 함)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/springstudy/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/springstudy/transactional/TransactionalControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;yellTa&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/yellTa/Spring-study.git&quot;,
+    &quot;accountId&quot;: &quot;ce77809f-110c-4546-8cb9-3864be9ba85b&quot;
+  }
+}</component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2qRMaASbnXuOge9L4aCSJ30SOcS" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build ThreadLocal-MDC.executor": "Run",
+    "Gradle.RequestContextFilterTest.executor": "Run",
+    "Gradle.RequestContextFilterTest.testRequestContextFilter.executor": "Run",
+    "Gradle.Spring-study [:org.example.springstudy.MDC.LogBackProgrammingConfig.main()].executor": "Run",
+    "Gradle.Spring-study [:org.example.springstudy.MDC.MDCTest.main()].executor": "Run",
+    "Gradle.TransactionalControllerTest.transactionalDebuggingTest.executor": "Debug",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.SpringStudyApplication.executor": "Run",
+    "code.cleanup.on.save": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "transactional",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "G:/0000study/0002personal_project/0002study_project/Spring-study/ThreadLocal-MDC",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.09746587",
+    "project.structure.side.proportion": "0.22493225",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Java",
+    "show.migrate.to.gradle.popup": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.springstudy.transactional.DTO" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.example.springstudy.transactional" />
+      <recent name="org.example.springstudy.threadLocal" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SpringStudyApplication">
+    <configuration name="LogBackProgrammingConfig" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.springstudy.MDC.LogBackProgrammingConfig" />
+      <module name="Spring-study.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.springstudy.MDC.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MDCTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.springstudy.MDC.MDCTest" />
+      <module name="Spring-study.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.springstudy.MDC.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RequestContextFilterTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.springstudy.threadLocal.RequestContextFilterTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="RequestContextFilterTest.testRequestContextFilter" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.springstudy.threadLocal.RequestContextFilterTest.testRequestContextFilter&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TransactionalControllerTest.transactionalDebuggingTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.springstudy.transactional.TransactionalControllerTest.transactionalDebuggingTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="SpringStudyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ThreadLocal_MDC.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.springstudy.SpringStudyApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.TransactionalControllerTest.transactionalDebuggingTest" />
+        <item itemvalue="Gradle.RequestContextFilterTest.testRequestContextFilter" />
+        <item itemvalue="Gradle.RequestContextFilterTest" />
+        <item itemvalue="Application.MDCTest" />
+        <item itemvalue="Application.LogBackProgrammingConfig" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e36a144f-6023-4206-96db-6803565cfc3e" name="Changes" comment="" />
+      <created>1734620998218</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1734620998218</updated>
+      <workItem from="1734620999746" duration="1964000" />
+      <workItem from="1734793307989" duration="9000" />
+      <workItem from="1734961788175" duration="369000" />
+      <workItem from="1734962170845" duration="10851000" />
+      <workItem from="1735098328355" duration="11662000" />
+      <workItem from="1735263206759" duration="496000" />
+      <workItem from="1735456189146" duration="1526000" />
+    </task>
+    <task id="LOCAL-00001" summary="MDC Study">
+      <option name="closed" value="true" />
+      <created>1734961951778</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1734961951778</updated>
+    </task>
+    <task id="LOCAL-00002" summary="MDC Study">
+      <option name="closed" value="true" />
+      <created>1734962372887</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1734962372887</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ThreadLocal 사용해보기&#10;&#10;CUstomRequestContext.java =====&#10;Context의 값을 저장할 객체 생성&#10;&#10;CustomRequestContextFilter.java====&#10;요청이 들어왔을 때 필터  requestID, userId를 지정&#10;&#10;ThreadLocalController.java=====&#10;ThreadLocal을 테스트 할 Controller지정 &#10;&#10;RequestContextFilterTest.java=====&#10;테스트에 Filter지정 &#10;MockMvc를 이용해서 Controller테스트 수행(MockMvc는 Controller 컴포넌트만 읽어와서 수행한다. 그 외의 다른 빈은 Import를통해서 Import해줘야 함)">
+      <option name="closed" value="true" />
+      <created>1735099433250</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1735099433250</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="MDC Study" />
+    <MESSAGE value="ThreadLocal 사용해보기&#10;&#10;CUstomRequestContext.java =====&#10;Context의 값을 저장할 객체 생성&#10;&#10;CustomRequestContextFilter.java====&#10;요청이 들어왔을 때 필터  requestID, userId를 지정&#10;&#10;ThreadLocalController.java=====&#10;ThreadLocal을 테스트 할 Controller지정 &#10;&#10;RequestContextFilterTest.java=====&#10;테스트에 Filter지정 &#10;MockMvc를 이용해서 Controller테스트 수행(MockMvc는 Controller 컴포넌트만 읽어와서 수행한다. 그 외의 다른 빈은 Import를통해서 Import해줘야 함)" />
+    <option name="LAST_COMMIT_MESSAGE" value="ThreadLocal 사용해보기&#10;&#10;CUstomRequestContext.java =====&#10;Context의 값을 저장할 객체 생성&#10;&#10;CustomRequestContextFilter.java====&#10;요청이 들어왔을 때 필터  requestID, userId를 지정&#10;&#10;ThreadLocalController.java=====&#10;ThreadLocal을 테스트 할 Controller지정 &#10;&#10;RequestContextFilterTest.java=====&#10;테스트에 Filter지정 &#10;MockMvc를 이용해서 Controller테스트 수행(MockMvc는 Controller 컴포넌트만 읽어와서 수행한다. 그 외의 다른 빈은 Import를통해서 Import해줘야 함)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/springstudy/transactional/TransactionalController.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
