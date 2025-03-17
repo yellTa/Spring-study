@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class AggregationBestContentsApplication {
 
-  public static void main(String[] args) {
-    SpringApplication.run(AggregationBestContentsApplication.class, args);
-  }
+	public static void main(String[] args) {
+		SpringApplication.run(AggregationBestContentsApplication.class, args);
+	}
 
 }
