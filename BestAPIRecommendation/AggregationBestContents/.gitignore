@@ -38,3 +38,5 @@ out/
 
 ### ._ file
 ._*
+/AggregationBestContents.zip
+/src/main/generated/example/aggregationbestcontents/Entity/Q*.java
