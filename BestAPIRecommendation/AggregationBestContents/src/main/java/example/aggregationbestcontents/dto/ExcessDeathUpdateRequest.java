@@ -1,4 +1,4 @@
-package example.aggregationbestcontents.DTO;
+package example.aggregationbestcontents.dto;
 
 import java.time.LocalDate;
 
