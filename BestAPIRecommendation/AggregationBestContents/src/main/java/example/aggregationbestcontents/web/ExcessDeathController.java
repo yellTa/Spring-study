@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import example.aggregationbestcontents.DTO.ExcessDeathUpdateRequest;
+import example.aggregationbestcontents.dto.ExcessDeathUpdateRequest;
 import example.aggregationbestcontents.Entity.ExcessDeathEntity;
-import example.aggregationbestcontents.Repository.ExcessDeathRepository;
+import example.aggregationbestcontents.repository.ExcessDeathRepository;
 import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequiredArgsConstructor
-public class ExcessDFeathController {
+public class ExcessDeathController {
 
 	private final RedisTemplate<String, String> redisTemplate;
 	private final ObjectMapper objectMapper;
