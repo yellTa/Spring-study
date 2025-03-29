@@ -1,6 +1,7 @@
 package example.aggregationbestcontents.Entity;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,20 +12,20 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "excess_deaths")
+@Table(name = "excess_deaths_log")
 @Getter
 @Setter
-public class ExcessDeathEntity {
+public class ExcessDeathsLogEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-
 	private Long id;
 
-	private String state;
 	private LocalDate weekEndingDate;
-	private Integer observedNumber;
+	private String state;
+	private Float observedNumber;
 	private Integer upperBoundThreshold;
-
+	private Float combinedValue;
+	private LocalDateTime createdAt;
+	private Integer rankNumber;
 }
-
